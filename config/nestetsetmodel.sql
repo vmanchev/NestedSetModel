@@ -1,0 +1,13 @@
+
+CREATE TABLE `category` (
+`id`   INT(10) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
+`name` VARCHAR(100) NOT NULL,
+`lft`  INT(10) NOT NULL,
+`rgt`  INT(10) NOT NULL,
+INDEX (`lft`),
+INDEX (`rgt`)
+) ENGINE=InnoDB DEFAULT CHARSET=UTF8;
+
+INSERT INTO `category` VALUES (NULL, "---select---", 1, 2);
+
+

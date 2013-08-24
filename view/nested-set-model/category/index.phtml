@@ -1,0 +1,38 @@
+nested-set-model/category/index.phtml
+
+
+<?php
+$title = 'Nested categories';
+$this->headTitle($title);
+?>
+<h1><?php echo $this->escapeHtml($title); ?></h1>
+
+
+<table class="table">
+<tr>
+    <th>Name</th>
+    <th>LFT</th>
+    <th>RGT</th>
+    <th>&nbsp;</th>
+</tr>
+<?php foreach ($categories as $category) : ?>
+<tr>
+    <td><?php echo $this->escapeHtml($category->name);?></td>
+    <td><?php echo $this->escapeHtml($category->lft);?></td>
+    <td><?php echo $this->escapeHtml($category->rgt);?></td>
+    <td>
+        <a href="<?php echo $this->url('nested_category',
+            array('action'=>'add', 'id' => $category->id));?>">Add Sub Category</a> |              
+        <a href="<?php echo $this->url('nested_category',
+            array('action'=>'edit', 'id' => $category->id));?>">Edit</a>
+            
+            <?php if($category->lft > 1){ ?>
+             | 
+        <a href="<?php echo $this->url('nested_category',
+            array('action'=>'delete', 'id' => $category->id));?>">Delete</a>
+            
+            <?php } ?>
+    </td>
+</tr>
+<?php endforeach; ?>
+</table>

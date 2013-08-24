@@ -1,0 +1,6 @@
+NestedSetModel as ZF2 module
+
+Current functionality includes:
+1. Add new node (on any level)
+2. Edit node name
+3. Delete node (on any level)
