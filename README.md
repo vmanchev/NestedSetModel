@@ -1,15 +1,16 @@
-NestedSetModel as ZF2 module
+# NestedSetModel as ZF2 module
 
-Current functionality includes:
+## Current functionality includes:
 1. Add new node (on any level)
 2. Edit node name
 3. Delete node (on any level)
 
-How to install?
+## How to install?
 
 1. Import the nestedsetmodel.sql file from /NestedSetModel/config
 2. Update your main /config/autoload/global.php file to:
 
+```php
 <?php
 return array(
     'db' => array(
@@ -28,6 +29,7 @@ return array(
         ),
     ),
 );
+```
 
 Note, you should have Pdo and Pdo_MySQL already installed.
 
